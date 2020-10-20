@@ -2,20 +2,25 @@ package Correo;
 
 public class Cajero {
 	private String nombre,apellido;
-	
+	public Cajero(String nombre,String apellido) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
 	public Paquete recibirPaquete(Paquete paquete) {
 		return paquete;
 	}
-	public double cobrarTotal(Factura factura) {
-		// get total desde factura 
-		double total = this.factura.total;
-		return total;
+	double total;
+	public void cobrarTotal(Remitente remitente,Factura factura) {
+		
+		remitente.setBilletera(remitente.getBilletera() - factura.totalACobrar);
+		System.out.println("El saldo de tu billetera es: "+remitente.getBilletera());
 	}
-	public Paquete pesarPaquete(Paquete paquete){
-		//getter de peso paquete
-		return paquete;
+	public double pesarPaquete(Paquete paquete){
+		return paquete.getPeso();
 	}
-	public Factura entregarTicket(Factura factura) {
-		return factura;
+
+	public void calcularPrecio(Factura factura) {
+		this.calcularPrecio(factura);
+		
 	}
 }
