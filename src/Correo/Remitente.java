@@ -16,49 +16,55 @@ public class Remitente {
 		this.codigoPostal = codigoPostal;
 		this.dni = dni;
 		this.billetera = billetera;
+		
 	}
-
+	
 	public String firmar() {
 		String firma = "Kevin";
 		return firma;
 	}
 	
+	
 	public double pagarTotal(){
 		return 2;
 	}
 	
-	public void llevarASucursal(Paquete paquete) {
-		if(paquete == entregado) {
-			
-		}else {
-			
-		}
-	}
+//	public void llevarASucursal(Paquete paquete) {
+//		if(paquete == entregado) {
+//			
+//		}else {
+//			
+//		}
+//	}
 	
 	public void poseerPaquete(Paquete paquete) {
 		paquetes.add(paquete);
-		
 	}
 	public List<Paquete> getPaquetes(){
 		return this.paquetes;
 	}
-	
+	public String getNombre() {
+		return this.nombre;
+	}
 	public double getBilletera() {
 		return this.billetera;
 	}
 	public void setBilletera(double billetera) {
 		this.billetera = billetera;
 	}
-	public void entregarPaquete(Cajero cajero, Paquete paquete) {
+	public void entregarPaquete(Sucursal sucursal, List<Paquete> paquetes) {
+		// preguntar si usar recibir en sucursal o dejamos entregar en remitente
+		sucursal.getPaquetes().addAll(paquetes);
+		System.out.println("Paquetes entregados a cajero: "+sucursal.getPaquetes().size());
 		
 	}
 	
-	public String elegirTipoEnvio(){
-		if(tipoDeEnvio == "Express") {
-			Paquete.tipoDeEnvio = "Express";
-		}else {
-			Paquete.tipoDeEnvio = "Normal";
-		}
-		
-	}
+//	public String elegirTipoEnvio(){
+//		if(tipoDeEnvio == "Express") {
+//			Paquete.tipoDeEnvio = "Express";
+//		}else {
+//			Paquete.tipoDeEnvio = "Normal";
+//		}
+//		
+//	}
 }

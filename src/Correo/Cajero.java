@@ -19,8 +19,12 @@ public class Cajero {
 		return paquete.getPeso();
 	}
 
-	public void calcularPrecio(Factura factura) {
-		this.calcularPrecio(factura);
+	
+	public Factura facturar(Remitente remitente) {
 		
+		Factura factura = new Factura(remitente);
+		remitente.setBilletera(remitente.getBilletera() - factura.totalACobrar);
+		System.out.println("Su factura es de: $"+ factura.totalACobrar + " Queda en billetera $"+ remitente.getBilletera());
+		return factura;
 	}
 }
