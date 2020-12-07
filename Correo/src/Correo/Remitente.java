@@ -28,7 +28,14 @@ public class Remitente {
 	public double pagarTotal(){
 		return 2;
 	}
-
+	
+//	public void llevarASucursal(Paquete paquete) {
+//		if(paquete == entregado) {
+//			
+//		}else {
+//			
+//		}
+//	}
 	
 	public void poseerPaquete(Paquete paquete) {
 		paquetes.add(paquete);
@@ -46,11 +53,18 @@ public class Remitente {
 		this.billetera = billetera;
 	}
 	public void entregarPaquete(Sucursal sucursal, List<Paquete> paquetes) {
-		
+		// preguntar si usar recibir en sucursal o dejamos entregar en remitente
 		sucursal.getPaquetes().addAll(paquetes);
 		System.out.println("Paquetes entregados a cajero: "+sucursal.getPaquetes().size());
 		
 	}
 	
-
+//	public String elegirTipoEnvio(){
+//		if(tipoDeEnvio == "Express") {
+//			Paquete.tipoDeEnvio = "Express";
+//		}else {
+//			Paquete.tipoDeEnvio = "Normal";
+//		}
+//		
+//	}
 }

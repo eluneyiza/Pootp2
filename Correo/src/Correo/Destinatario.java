@@ -24,5 +24,12 @@ public class Destinatario {
 		return this.paquetesRecibidos;
 	}
 	
-
+//	public boolean confirmarEnvio(Paquete paquete) {
+//		if(paquete == entregado) {
+//			return true;
+//		}else {
+//			return false;
+//		}
+//	}
+//	
 }

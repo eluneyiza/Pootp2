@@ -7,7 +7,7 @@ public class Cartero {
 	private String nombre,apellido,transporte;
 	private int legajo;
 	private List<Paquete> paquetesAEntregar = new ArrayList();
-	
+	// paquetesAEntregar: paquete[];
 	
 	public Cartero(String nombre) {
 		nombre = this.nombre;

@@ -1,7 +1,8 @@
 package Correo;
 
 public class Factura {
-
+	// public precio(paquete):pesos
+	// public sucursal(sucursal): sucu
 	public int fechaFacturacion,horaFacturacion;
 	double totalACobrar;
 	private String nombreRemitente;

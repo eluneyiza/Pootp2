@@ -2,7 +2,8 @@ package Correo;
 
 public class Paquete{
 	private String direccion,sello,firmaDestinatario,aclaracion,selloSucursal,selloDestino,firmaCartero,prioridad,estado;
-	
+	// remitente remitente
+	// destinatario destinatario
 	private double peso,valorDeclarado,tipoDeEnvio,precio;
 	private int cantidadDeAvisos;
 	
